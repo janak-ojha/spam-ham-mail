@@ -1,4 +1,5 @@
 import streamlit as st
+import nltk
 import pickle
 import string
 from nltk.corpus import stopwords
@@ -38,6 +39,7 @@ model = pickle.load(open('spammodel.pkl','rb'))
 st.title("Email/SMS Spam Classifier")
 
 input_sms = st.text_area("Enter the message")
+nltk.download('punkt')
 
 if st.button('Predict'):
 
