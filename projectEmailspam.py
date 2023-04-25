@@ -6,9 +6,9 @@ import stopwords
 from nltk.corpus import stopwords
 import nltk
 from nltk.stem.porter import PorterStemmer
-
+nltk.download('stopwords')
 ps = PorterStemmer()
-
+# nltk
 def transform_text(text):
     text = text.lower()
     text = nltk.word_tokenize(text)
